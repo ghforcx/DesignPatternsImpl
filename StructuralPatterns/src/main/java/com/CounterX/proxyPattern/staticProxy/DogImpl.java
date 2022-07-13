@@ -3,6 +3,8 @@ package com.CounterX.proxyPattern.staticProxy;
 public class DogImpl implements Dog {
     private String name;
 
+    public DogImpl(){}
+
     @Override
     public String getName() {
         return this.name;
@@ -15,7 +17,7 @@ public class DogImpl implements Dog {
 
     @Override
     public int bark() {
-        System.out.println(name + " bark: wow~");
+        System.out.println(name + " bark: Woof~");
         return 0;
     }
 }
