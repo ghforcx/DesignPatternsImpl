@@ -12,7 +12,7 @@
 
 创建型模式包括：
 
-- [ ] 工厂方法：Factory Method
+- [X] 工厂方法：Factory Method
 - [ ] 抽象工厂：Abstract Factory
 - [ ] 建造者：Builder
 - [ ] 原型：Prototype
