@@ -12,7 +12,7 @@
 
 创建型模式包括：
 
-- [ ] 工厂方法：Factory Method
+- [X] 工厂方法：Factory Method
 - [ ] 抽象工厂：Abstract Factory
 - [ ] 建造者：Builder
 - [ ] 原型：Prototype
@@ -31,7 +31,7 @@
 - [ ] 装饰器模式（Decorator Pattern）
 - [ ] 外观模式（Facade Pattern）
 - [ ] 享元模式（Flyweight Pattern）
-- [ ] 代理模式（Proxy Pattern）
+- [X] 代理模式（Proxy Pattern）
 
 # 4 行为型模式（Behavioral Patterns）
 
