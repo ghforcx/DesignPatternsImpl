@@ -1,13 +1,24 @@
 package com.CounterX.singletonPattern;
 
-public class DclLazy {
+import java.io.Serializable;
 
-    private static DclLazy lazy;
+public class DclLazy implements Serializable {
+
+    private static volatile DclLazy instance;
+
 
     private DclLazy() {}
 
-    public static DclLazy getLazy() {
-        if (lazy == null) lazy = new DclLazy();
-        return lazy;
+    public static DclLazy getInstance() {
+        DclLazy localRef = instance;
+        while (localRef == null) {
+            synchronized (DclLazy.class) {
+                localRef = instance;
+                if (localRef == null) {
+                    localRef = instance = new DclLazy();
+                }
+            }
+        }
+        return localRef;
     }
 }

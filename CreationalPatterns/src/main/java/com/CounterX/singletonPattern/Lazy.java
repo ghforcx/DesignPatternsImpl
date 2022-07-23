@@ -1,13 +1,16 @@
 package com.CounterX.singletonPattern;
 
-public class Lazy {
+import java.io.Serializable;
 
-    private static Lazy lazy;
+public class Lazy implements Serializable {
+
+    private static Lazy instance;
 
     private Lazy() {}
 
-    public static Lazy getLazy() {
-        if (lazy == null) lazy = new Lazy();
-        return lazy;
+    public static Lazy getInstance() {
+        if (instance == null) instance = new Lazy();
+        return instance;
     }
+
 }

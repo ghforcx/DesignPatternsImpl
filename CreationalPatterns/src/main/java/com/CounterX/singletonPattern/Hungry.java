@@ -1,12 +1,14 @@
 package com.CounterX.singletonPattern;
 
-public class Hungry {
+import java.io.Serializable;
 
-    private static final Hungry hungry = new Hungry();
+public class Hungry implements Serializable {
+
+    private static final Hungry instance = new Hungry();
 
     private Hungry() {};
 
-    public static Hungry getHungry() {
-        return hungry;
+    public static Hungry getInstance() {
+        return instance;
     }
 }
