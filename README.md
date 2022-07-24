@@ -12,11 +12,11 @@
 
 创建型模式包括：
 
-- [X] 工厂方法：Factory Method
-- [ ] 抽象工厂：Abstract Factory
-- [ ] 建造者：Builder
-- [ ] 原型：Prototype
-- [ ] 单例：Singleton
+- [X] 工厂方法模式：Factory Method
+- [ ] 抽象工厂模式：Abstract Factory
+- [ ] 建造者模式：Builder
+- [ ] 原型模式：Prototype
+- [X] 单例模式：Singleton
 
 # 3 结构型模式（Structural Patterns）
 
