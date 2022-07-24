@@ -1,6 +1,6 @@
 package singletonPattern;
 
-import com.CounterX.singletonPattern.Hungry;
+import com.CounterX.singletonPattern.InnerClazzSingleton;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -9,43 +9,44 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.concurrent.TimeUnit;
 
-public class TestHungry {
+public class TestInnerClazzSingleton {
 
     @Test
-    public void test1() {
-        System.out.println("测试并发，10个线程应打印同一对象");
+    public void test1() throws InterruptedException {
+        System.out.println("测试并发，10个线程应打印同一个对象");
         for (int i = 0; i < 10; i++) {
             new Thread(() -> {
-                System.out.println(Hungry.getInstance());
+                System.out.println(InnerClazzSingleton.getInstance());
             }).start();
         }
-
+        TimeUnit.MILLISECONDS.sleep(100);
     }
 
     @Test
     public void test2() {
-        System.out.println("测试饿汉式单例，两次获取的应该是同一个对象");
-        Hungry hungry1 = Hungry.getInstance();
-        Hungry hungry2 = Hungry.getInstance();
-        System.out.println(hungry1);
-        System.out.println(hungry2);
-        System.out.println(hungry1 == hungry2);
-        assert hungry1 == hungry2;
+        System.out.println("测试懒汉式单例，两次获取的应是同一对象");
+        InnerClazzSingleton lazy1 = InnerClazzSingleton.getInstance();
+        InnerClazzSingleton lazy2 = InnerClazzSingleton.getInstance();
+        System.out.println(lazy1);
+        System.out.println(lazy2);
+        System.out.println(lazy1 == lazy2);
+        assert lazy1 == lazy2;
     }
 
     @Test
     public void test3() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        System.out.println("通过反射破坏单例，应产生两个不同的对象（哈希值不同）");
-        Hungry hungry1 = Hungry.getInstance();
-        Class<?> clazz = hungry1.getClass();
+        System.out.println("通过反射破坏单例，两个应为不同的对象");
+        InnerClazzSingleton lazy1 = InnerClazzSingleton.getInstance();
+        Class<?> clazz = lazy1.getClass();
         Constructor constructor = clazz.getDeclaredConstructor(null);
         constructor.setAccessible(true);
-        Hungry hungry2 = (Hungry) constructor.newInstance(null);
-        System.out.println(hungry1);
-        System.out.println(hungry2);
-        System.out.println(hungry1 == hungry2);
-        assert hungry1 != hungry2;
+        InnerClazzSingleton lazy2 = (InnerClazzSingleton) constructor.newInstance(null);
+        System.out.println(lazy1);
+        System.out.println(lazy2);
+        System.out.println(lazy1 == lazy2);
+        assert lazy1 != lazy2;
     }
 
     @Test
@@ -55,20 +56,20 @@ public class TestHungry {
         ObjectOutputStream objectOutputStream = null;
         FileInputStream fileInputStream = null;
         ObjectInputStream objectInputStream = null;
-        Hungry hungry = Hungry.getInstance();
+        InnerClazzSingleton singleton = InnerClazzSingleton.getInstance();
         try {
             // Write Object to file
             fileOutputStream = new FileOutputStream("./1.txt");
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(hungry);
+            objectOutputStream.writeObject(singleton);
             // Read Object from file
             fileInputStream = new FileInputStream("./1.txt");
             objectInputStream = new ObjectInputStream(fileInputStream);
-            Hungry hungry1 = (Hungry) objectInputStream.readObject();
+            InnerClazzSingleton singleton1 = (InnerClazzSingleton) objectInputStream.readObject();
             // compare
-            System.out.println(hungry);
-            System.out.println(hungry1);
-            assert hungry != hungry1;
+            System.out.println(singleton);
+            System.out.println(singleton1);
+            assert singleton != singleton1;
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
