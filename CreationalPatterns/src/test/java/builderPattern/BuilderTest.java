@@ -5,19 +5,17 @@ import com.CounterX.builderPattern.constant.ProductTypeEnum;
 import com.CounterX.builderPattern.products.*;
 import org.junit.Test;
 
-import java.lang.reflect.Method;
-
 public class BuilderTest {
 
     @Test
     public void test00() {
-        Product0 product = new Product0(1, ProductTypeEnum.COMMON_BUSINESS, "商业产品");
+        Product1 product = new Product1(1, ProductTypeEnum.COMMON_BUSINESS, "商业产品");
         System.out.println(product);
     }
 
     @Test
     public void test01() {
-        Product1 product = new Product1();
+        Product2 product = new Product2();
         product.setId(1);
         product.setType(ProductTypeEnum.COMMON_BUSINESS);
         product.setName("商业产品");
@@ -36,7 +34,7 @@ public class BuilderTest {
 
     @Test
     public void test03() {
-        Product2 product = new Product2()
+        Product3 product = new Product3()
                 .setId(1)
                 .setType(ProductTypeEnum.COMMON_BUSINESS)
                 .setName("商业产品");

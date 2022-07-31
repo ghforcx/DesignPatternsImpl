@@ -14,7 +14,7 @@
 
 - [X] 工厂方法模式：Factory Method
 - [ ] 抽象工厂模式：Abstract Factory
-- [ ] 建造者模式：Builder
+- [X] 建造者模式：Builder
 - [ ] 原型模式：Prototype
 - [X] 单例模式：Singleton
 

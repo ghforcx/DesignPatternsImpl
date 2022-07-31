@@ -2,15 +2,15 @@ package com.CounterX.builderPattern.builder;
 
 import com.CounterX.builderPattern.constant.ProductTypeEnum;
 import com.CounterX.builderPattern.products.Product;
-import com.CounterX.builderPattern.products.Product1;
+import com.CounterX.builderPattern.products.Product2;
 
 public class BusinessBuilder implements Builder{
     
-    private Product1 product;
+    private Product2 product;
     
     @Override
     public Builder init() {
-        product = new Product1();
+        product = new Product2();
         return this;
     }
 
