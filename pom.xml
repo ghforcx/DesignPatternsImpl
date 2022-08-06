@@ -11,6 +11,7 @@
     <modules>
         <module>CreationalPatterns</module>
         <module>StructuralPatterns</module>
+        <module>BehavioralPatterns</module>
     </modules>
 
     <properties>
