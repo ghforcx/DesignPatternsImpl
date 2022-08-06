@@ -1,4 +1,4 @@
-package dynamicProxyTest;
+package proxyPattern.dynamicProxyTest;
 
 import com.CounterX.proxyPattern.dynamicProxy.pojo.Animal;
 import com.CounterX.proxyPattern.dynamicProxy.pojo.Bird;

@@ -1,4 +1,4 @@
-package staticProxyTest;
+package proxyPattern.staticProxyTest;
 
 import com.CounterX.proxyPattern.staticProxy.Dog;
 import com.CounterX.proxyPattern.staticProxy.DogImpl;
