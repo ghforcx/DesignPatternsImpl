@@ -24,7 +24,7 @@
 
 结构型模式有：
 
-- [ ] 适配器模式（Adapter Pattern） 
+- [X] 适配器模式（Adapter Pattern） 
 - [ ] 桥接模式（Bridge Pattern）
 - [ ] 过滤器模式（Filter、Criteria Pattern）
 - [ ] 组合模式（Composite Pattern）
@@ -49,8 +49,3 @@
 - [ ] 策略模式（Strategy Pattern）
 - [ ] 模板模式（Template Pattern）
 - [ ] 访问者模式（Visitor Pattern）
-
-# 5 参考资料
-1. [设计模式（菜鸟教程）](https://www.runoob.com/design-pattern/design-pattern-intro.html)
-2. [设计模式 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1252599548343744/1264742167474528)
-3. [动态代理详解 遇见狂神说 bilibili](https://www.bilibili.com/video/BV1WE411d7Dv?p=19)
