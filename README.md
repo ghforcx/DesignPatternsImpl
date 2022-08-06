@@ -37,7 +37,7 @@
 
 行为型模式主要涉及算法和对象间的职责分配。通过使用对象组合，行为型模式可以描述一组对象应该如何协作来完成一个整体任务。
 
-- [ ] 责任链模式（Chain of Responsibility Pattern）
+- [X] 责任链模式（Chain of Responsibility Pattern）
 - [ ] 命令模式（Command Pattern）
 - [ ] 解释器模式（Interpreter Pattern）
 - [ ] 迭代器模式（Iterator Pattern）
