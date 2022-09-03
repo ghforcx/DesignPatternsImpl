@@ -7,7 +7,7 @@
     <groupId>com.CounterX</groupId>
     <artifactId>DesignPatternsImpl</artifactId>
     <packaging>pom</packaging>
-    <version>0.7-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <modules>
         <module>CreationalPatterns</module>
         <module>StructuralPatterns</module>
