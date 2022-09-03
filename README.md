@@ -39,22 +39,23 @@
 行为型模式主要涉及算法和对象间的职责分配。通过使用对象组合，行为型模式可以描述一组对象应该如何协作来完成一个整体任务。
 
 - [X] 责任链模式（Chain of Responsibility Pattern）
-- [ ] 命令模式（Command Pattern）
-- [ ] 解释器模式（Interpreter Pattern）
+- [X] 命令模式（Command Pattern）
+- [X] 解释器模式（Interpreter Pattern）
 - [X] 迭代器模式（Iterator Pattern）
 - [ ] 中介模式（Mediator Pattern）
 - [ ] 备忘录模式（Memento Pattern）
 - [ ] 观察者模式（Observer Pattern）
 - [ ] 状态模式（State Pattern）
 - [ ] 策略模式（Strategy Pattern）
-- [ ] 模板模式（Template Pattern）
+- [X] 模板方法模式（Template Method Pattern）
 - [ ] 访问者模式（Visitor Pattern）
 
 # 3 后续计划
 
 | 版本  | 状态  | 描述                 |
 |-----|-----|--------------------|
-| 1.0 | 开发中 | 完成所有23种设计模式的最简实现   |
+| 0.9 | 开发中 | 完成所有23种设计模式的最简实现   |
+| 1.0 | 未开始 | 统一风格，增强可读性         |
 | 1.1 | 未开始 | 增加UML类图的介绍         |
 | 2.0 | 未开始 | 变更结构，增加设计模式应用场景的解析 |
 
