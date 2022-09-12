@@ -44,9 +44,9 @@
 - [X] 迭代器模式（Iterator Pattern）
 - [ ] 中介模式（Mediator Pattern）
 - [ ] 备忘录模式（Memento Pattern）
-- [ ] 观察者模式（Observer Pattern）
+- [X] 观察者模式（Observer Pattern）
 - [ ] 状态模式（State Pattern）
-- [ ] 策略模式（Strategy Pattern）
+- [X] 策略模式（Strategy Pattern）
 - [X] 模板方法模式（Template Method Pattern）
 - [ ] 访问者模式（Visitor Pattern）
 
